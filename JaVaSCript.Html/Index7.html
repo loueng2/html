@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOUENGBUNLY</title>
+    <link rel="stylesgeet" href="style2.css" />
+  </head>
+  <style>
+     *link font poppins */
+@import url('<link rel="preconnect" href="https://fonts.googleapis.com">') * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LOUENGBUNLY {
+  background-image: url(image/StudiView.jpeg);
+  padding: 26px;
+  border-radius: 20px;
+}
+input {
+  width: 330px;
+  padding: 25px;
+  margin: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 45px;
+  text-align: right;
+  color: #000;
+}
+input::placeholder {
+  color: #000;
+}
+button {
+  border: none;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: #303136;
+  font-size: 21px;
+  font-weight: 600px;
+  color: #fff;
+  margin: 10px;
+  cursor: pointer;
+}
+.hasil {
+  width: 114px;
+  color: #fff;
+  background: orange;
+  font-weight: 700;
+}
+.main {
+  color: #000;
+  background: orange;
+  font-weight: 400;
+}
+.operater {
+  color: #000;
+  background: blueviolet;
+}
+  </style>
+  <body>
+    <div class="container">
+      <div class="LOUENG BUNLY">
+        <input type="text" placeholder="0" id="inputbox" />
+
+        <div>
+          <button class="main">AC</button>
+          <button class="main">DE</button>
+          <button class="operator">%</button>
+          <button class="operator">/</button>
+        </div>
+        <div>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="operator">X</button>
+        </div>
+
+        <div>
+          <button>6</button>
+          <button>5</button>
+          <button>4</button>
+          <button class="operator">+</button>
+        </div>
+
+        <div>
+          <button>3</button>
+          <button>2</button>
+          <button>1</button>
+          <button class="operator">-</button>
+        </div>
+
+        <div>
+          <button>0</button>
+          <button>.</button>
+          <button class="hasil">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="test1.js">
+              let input = document.getElementById('inputbox');
+      let buttons = document.querySelectorAll('button');
+
+      let string ="";
+      let arr = Array.from(buttons);
+      arr.forEach(buttons => {
+          buttons.addEventListener('click', (e) => {
+              string = eval(string);
+              input.value = string;
+          }
+          else if (e.target.innerHTML == 'AC') {
+              string = "";
+              input.value = string;
+          }
+          else if (e.target.innerHTML == 'DE') {
+              string = string.substring(0, string.length - 1);
+          }
+          else {
+               string += e.target.innerHTML;
+               input.value = string
+
+              }
+          })
+      })
+    </script>
+  </body>
+</html>

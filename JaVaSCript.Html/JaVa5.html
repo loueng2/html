@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h3></h3>
+    <script>
+      function arg(num) {
+        for (var i = 0; i <= num; i++) {
+          document.write(i, " ");
+        }
+      }
+    </script>
+    <br />
+    <script>
+      function sum(a, b) {
+        return a + b;
+      }
+      document.write("Total = " + sum(5, 3));
+    </script>
+    <hr />
+    <form>
+      Input :
+      <input type="text" id="txta" size="10" />
+      <input type="text" id="txtb" size="10" />
+      <input
+        type="button"
+        value="OK"
+        onclick="arg(document.getElementById('txta').value)"
+      />
+    </form>
+  </body>
+</html>

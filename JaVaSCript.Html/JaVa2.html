@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Result</title>
+    <style>
+        body {
+            font-family: Ari, sans-sreif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .result-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(0, 0, 0.1);
+        }
+        .resul {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+    <div class="resul">a > b && b > c; &nbsp;&nbsp;&nbsp;Result:<
+    strong>False</strong>/div>
+    <div class="resul">a > b && !(b > c); &nbsp;&nbsp;&nbsp;Result:<
+        strong>False</strong>/div>
+    <div class="resul">!(a > b && b > c); &nbsp;&nbsp;&nbsp;Result:<
+        strong>True</strong>/div>
+    <div class="resul">a > b  b > c;  &nbsp;&nbsp;&nbsp;Result:<
+        strong>True</strong>/div>
+     <div class="resul">!(a > b)  (b > c); &nbsp;&nbsp;&nbsp;Result:<
+        strong>True</strong>/div>
+    </div>
+</body>
+</html>

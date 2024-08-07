@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function login() {
+            var a = document.getElementByIdfId("txta").value;
+            var b = document.getElementByIdfId("txtab").value;
+            var total = eval(a) + eval(b);
+            var avg = total / 2;
+            if (avg < 60) {
+                var r = "Fail";
+            } else {
+                var r = "Pass"
+            }
+            
+        }
+        // 
+        document.w site("Sum = " + total1 + "<br/> Sub = " + total2  + "<br/>Multiple = " + total3+"<br/> Divsion =  " +total4+"<br/> Divsion ="+ total4);
+    </script>
+    </head>
+    <body>
+        <form> 
+
+          Number : <input type="text" id="txtname" size="5" />
+           <input type="text" id="txtb" size="5" />
+           <input type="button" value="Ok" onclick="sum()" />
+        </form>
+        <h3 id="result">My name is BBU JS</h3>
+    </body>
+</body>
+</html>
